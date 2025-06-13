@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Task.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Task.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">tasktracker</span><span class="s2">.</span><span class="s1">model</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">persistence</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">time</span><span class="s2">.</span><span class="s1">LocalDate</span><span class="s2">;</span>
+
+<span class="s1">@Entity </span><span class="s3">// Makes this class a table in the DB</span>
+<span class="s0">public class </span><span class="s1">Task </span><span class="s2">{</span>
+
+    <span class="s1">@Id </span><span class="s3">// Primary key</span>
+    <span class="s1">@GeneratedValue</span><span class="s2">(</span><span class="s1">strategy </span><span class="s2">= </span><span class="s1">GenerationType</span><span class="s2">.</span><span class="s1">IDENTITY</span><span class="s2">) </span><span class="s3">// Auto-increment</span>
+    <span class="s0">private </span><span class="s1">Long id</span><span class="s2">;</span>
+
+    <span class="s0">private </span><span class="s1">String title</span><span class="s2">;</span>
+
+    <span class="s0">private </span><span class="s1">LocalDate dueDate</span><span class="s2">;</span>
+
+    <span class="s0">private boolean </span><span class="s1">completed</span><span class="s2">;</span>
+
+    <span class="s3">// Getters and Setters (to read/write data)</span>
+
+    <span class="s0">public </span><span class="s1">Long getId</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setId</span><span class="s2">(</span><span class="s1">Long id</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">id </span><span class="s2">= </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getTitle</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">title</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setTitle</span><span class="s2">(</span><span class="s1">String title</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">title </span><span class="s2">= </span><span class="s1">title</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">LocalDate getDueDate</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">dueDate</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setDueDate</span><span class="s2">(</span><span class="s1">LocalDate dueDate</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">dueDate </span><span class="s2">= </span><span class="s1">dueDate</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public boolean </span><span class="s1">isCompleted</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">completed</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setCompleted</span><span class="s2">(</span><span class="s0">boolean </span><span class="s1">completed</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">completed </span><span class="s2">= </span><span class="s1">completed</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
